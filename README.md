@@ -44,9 +44,6 @@ Pull requests are **highly appreciated**.
 
 Solve a problem. Features are great, but even better is cleaning-up and fixing issues in the code that you discover.
 
-## Versioning
-
-Core is maintained by using the [Semantic Versioning Specification (SemVer)](http://semver.org).
 
 
 ## Copyright and license
