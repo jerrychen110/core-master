@@ -1,0 +1,39 @@
+{
+    "name": "caffeina-core/core",
+    "type": "library",
+    "description": "Platform for rapid application development.",
+    "keywords": ["framework","core","sdk","platform"],
+    "homepage": "http://caffeina.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefano Azzolini",
+            "email": "lastguest@gmail.com"
+        },
+        {
+            "name": "Gabriele Diener",
+            "email": "gabriele.diener@caffeina.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5"
+    },
+    "scripts": {
+        "test-lint" : "find classes -type f -name '*.php' -exec php -l {} \\;",
+    	  "test" : "vendor/bin/phpunit --colors=always --configuration=phpunit.xml",
+        "changelog" : "docs/build-changelog.sh --skip-head > CHANGELOG.md && git add -A && git commit -am \"Updated CHANGELOG\""
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "classmap": [ "classes/" ]
+    },
+    "autoload-dev": {
+        "classmap": [ "classes/", "tests/" ]
+    }
+}
